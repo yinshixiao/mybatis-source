@@ -1,4 +1,4 @@
-package source345;
+package example;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,8 +8,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.ibatis.session.defaults.DefaultSqlSession;
 import org.apache.ibatis.session.defaults.DefaultSqlSessionFactory;
 import org.apache.log4j.Logger;
-
-import source345.entity.User;
 
 public class Test1 {
 
@@ -29,7 +27,7 @@ public class Test1 {
 		DefaultSqlSessionFactory sqlSessionFactory = (DefaultSqlSessionFactory) new SqlSessionFactoryBuilder().build(inputStream);
 		DefaultSqlSession sqlSession = (DefaultSqlSession) sqlSessionFactory.openSession();
 		
-		User user = sqlSession.selectOne("source345.Test1.getUsers");
+		User user = sqlSession.selectOne("example.Test1.getUsers");
 		log.info(user.toString());
 		sqlSession.commit();
 		sqlSession.close();

@@ -1,4 +1,4 @@
-package source345.entity;
+package example;
 
 public class User {
 
