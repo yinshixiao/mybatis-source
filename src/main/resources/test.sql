@@ -1,0 +1,6 @@
+create table sys_user(
+	id int  primary key auto_increment,
+	name varchar(20) 
+);
+
+insert into sys_user (name)  values  ('zhangsan');
